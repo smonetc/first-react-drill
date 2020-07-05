@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Sally Student React</title>
+		
+		<style>
+			body{
+				flex-wrap: wrap;
+			}
+			a{
+				display: block;
+				font-size: 1.1rem;
+			}
+			h2{
+				font-size: 1.6rem;
+			}
+			p{
+				font-size: 1.3rem ;
+			}
+			ul li{
+				font-size: 1.3rem;
+				list-style: none;
+			}
+		</style>
+</head>
+
+<body>
+    
+		<header id="application-root"></header>
+		<!-- <img src="https://ia.media-imdb.com/images/M/MV5BMTY5NzE3NzU3MF5BMl5BanBnXkFtZTgwMjg0NTQ5MDE@._V1_UX214_CR0,0,214,317_AL_.jpg" alt="sally student"> -->
+		<main>
+			<section id="info"></section>
+			<section id="education"></section>
+			<section id="work-history"></section>
+		</main>
+
+
+
+    <script
+    src="https://unpkg.com/react@16/umd/react.development.js">
+    </script>
+    <script
+    src="https://unpkg.com/react-dom@16/umd/react-dom.development.js">
+    </script>
+    <script
+    src="https://unpkg.com/babel-standalone@6/babel.min.js">
+		</script>
+		
+		<script type="text/babel">
+		
+		// title seection
+			function App(props) {
+				return (
+					<div>
+						{props.children}
+					</div>	
+				);
+			}
+			ReactDOM.render(
+				<App className='my-class'>
+					<h2>Sally Student</h2>
+					<p>Web Developer</p>
+				</App>,
+				document.querySelector('#application-root')
+			);
+
+			// contact section
+			function App(props) {
+				return (
+					<div>
+						{props.children}
+					</div>	
+				);
+			}
+
+			const email = 'mailto:sallystudent@spam.com';
+			const phone = "tel:+13334567890";
+			const photo = "https://ia.media-imdb.com/images/M/MV5BMTY5NzE3NzU3MF5BMl5BanBnXkFtZTgwMjg0NTQ5MDE@._V1_UX214_CR0,0,214,317_AL_.jpg";
+			ReactDOM.render(
+				<App className='my-class'>
+					<h2>Contact Me</h2>
+					<img src={photo} alt="sally"/>
+					<p>Sally</p>
+					<address>
+						<a href={email}>sallystudent@spam.com</a>
+						<a href={phone}>13334567890</a>
+					</address>
+				</App>,
+				document.querySelector('#info')
+			);
+
+			// education section
+			function App(props) {
+				return (
+					<div>
+						{props.children}
+					</div>	
+				);
+			}
+			ReactDOM.render(
+				<App className='my-class'>
+					<h2>Education</h2>
+					<ul>
+						<li>Academy of Art University 2011 - 2015</li>
+						<li> Bloc 2020</li>
+					</ul>
+				</App>,
+				document.querySelector('#education')
+			);
+
+			// work history section
+			function App(props) {
+				return (
+					<div>
+						{props.children}
+					</div>	
+				);
+			}
+			ReactDOM.render(
+				<App className='my-class'>
+					<h2>Work Experience</h2>
+					<ul>
+						<li> Pared Inc 
+							<ul>
+								<li>Human Resources</li>
+								<li>August 2009 - July 2014</li>
+								<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+							</ul>
+						</li>
+						<li>Broosters 
+							<ul>
+							<li> Human Resources </li>
+							<li> September 2014 - December 2019</li>
+							<li> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>  
+							</ul>
+						</li>
+      		</ul>
+				</App>,
+				document.querySelector('#education')
+			);
+
+    </script>
+</body>
+</html>
